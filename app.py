@@ -1,10 +1,10 @@
 from image_window import ImageWindow
-from mapviewer import TSMState, TSMStateMachine
+from mapviewer import TMSState, TMSStateMachine
 import tkinter
 root = tkinter.Tk()
-basestate = TSMState(0, 0, 0)
+basestate = TMSState(0, 0, 0)
 
-# See TSMState.any_image(self) in mapviewe if you want customize dir with map
+# See TMSState.any_image(self) in mapviewe if you want customize dir with map
 # Default @basedir is "map" and default @format is "png". Defined in mapviewer
 if not basestate.any_image():
     print("::application::(Error. Image for base state does not exist)")
@@ -13,7 +13,7 @@ if not basestate.any_image():
 # If you change default dir or image format
 # don't forget tell state machine about it.
 # Parameters are same: @basedir and @format
-mapmachine = TSMStateMachine(basestate)
+mapmachine = TMSStateMachine(basestate)
 window = ImageWindow(root, "Map Viewer", mapmachine.image())
 
 # Application interaction
