@@ -13,3 +13,4 @@ Yet another map viewer
 Клавиша 5 возвращает к просмотру тайла, который включает в себя отоброжаемый тайл (Z -= 1).
 
 Описание TMS-документа: http://gis-lab.info/docs/tms-specification-ru.html
+
